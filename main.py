@@ -1,4 +1,4 @@
-from crud import add_book, get_book,add_member, get_member, issue_book
+from crud import add_book, get_book,add_member, get_member, issue_book, return_book
 
 def addNewBook():
   title = input("Enter the book title: ")
@@ -34,6 +34,9 @@ def issueABook():
   member_id = int(input("Enter member id: " ))
   issue_book(book_id, member_id)
 
+def returnABook():
+   transaction_id = int(input("Enter a transaction Id: "))
+   return_book(transaction_id)
 
 def main():
   print("************************************")
@@ -59,7 +62,7 @@ def main():
   elif choice == "5":
     issueABook()
   elif choice == "6":
-    pass
+    returnABook()
   elif choice == "7":
     pass
   
