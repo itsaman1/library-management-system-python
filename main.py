@@ -75,6 +75,7 @@ def main():
     elif choice == "7":
       getTransactionForMember()
     else:
+      print("> Existed")
       break
   
     
