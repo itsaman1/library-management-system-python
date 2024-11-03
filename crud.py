@@ -41,3 +41,6 @@ def return_book(transaction_id):
     print(">Book return to library")
   else:
     print(">Book is already returned or not issued")
+
+def get_transaction_by_member(member_id):
+  return session.query(Transaction).filter_by(member_id = member_id).all()
